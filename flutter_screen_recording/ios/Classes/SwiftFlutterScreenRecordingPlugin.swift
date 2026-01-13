@@ -12,7 +12,7 @@ public class SwiftFlutterScreenRecordingPlugin: NSObject, FlutterPlugin {
     var videoOutputURL: URL?
     var isRecording = false
     var firstTimestamp: CMTime? 
-    let screenSize = UIScreen.main.bounds
+    let screenSize = UIScreen.main.nativeBounds.size
     
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "flutter_screen_recording", binaryMessenger: registrar.messenger())
